@@ -17,3 +17,4 @@ spec:
       containers:
         - name: vatsim-controller-diff
           image: ghcr.io/cr0wst/vatsim-controller-diff:main
+          imagePullPolicy: Always

@@ -12,7 +12,7 @@ async function main() {
 
 async function reportControllerChanges() {
   const now = new Date();
-  const newControllers = (await fetchControllers()).filter((c) => c.rating.short !== "OBS");
+  const newControllers = (await fetchControllers()).filter((c) => c.facility.short !== "OBS");
   // Generate a list of controllers that have been added or removed
 
   const differences = {
