@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vatsim-controller-diff-deployment
+  labels:
+    app: vatsim-controller-diff
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vatsim-controller-diff
+  template:
+    metadata:
+      labels:
+        app: vatsim-controller-diff
+    spec:
+      containers:
+        - name: vatsim-controller-diff
+          image: ghcr.io/cr0wst/vatsim-controller-diff:main
